@@ -20,14 +20,29 @@ public class Ordem
 	@Column(name = "user_id")
 	private Long userId;
 	
+	public Double getPreco() 
+	{
+		return preco;
+	}
+	
 	public void setPreco(Double preco) 
 	{
 	    this.preco = preco;
 	}
 
+	public String getTipo() 
+	{
+		return tipo;
+	}
+	
 	public void setTipo(String tipo) 
 	{
 	    this.tipo = tipo;
+	}
+	
+	public LocalDate getData() 
+	{
+		return data;
 	}
 
 	public void setData(LocalDate data) 
@@ -35,6 +50,11 @@ public class Ordem
 	    this.data = data;
 	}
 
+	public String getStatus() 
+	{
+		return status;
+	}
+	
 	public void setStatus(String status) 
 	{
 	    this.status = status;

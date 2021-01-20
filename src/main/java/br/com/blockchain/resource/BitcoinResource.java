@@ -2,6 +2,7 @@ package br.com.blockchain.resource;
 
 import java.util.List;
 
+import javax.annotation.security.PermitAll;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -21,6 +22,7 @@ public class BitcoinResource
 	BitcoinService bitcoinService;
 	
 	@GET
+	@PermitAll
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Bitcoin> listar() 
 	{
