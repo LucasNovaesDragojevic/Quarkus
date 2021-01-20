@@ -39,6 +39,11 @@ public class Ordem
 	{
 	    this.status = status;
 	}
+	
+	public Long getUserId() 
+	{
+		return userId;
+	}
 
 	public void setUserId(Long userId) 
 	{

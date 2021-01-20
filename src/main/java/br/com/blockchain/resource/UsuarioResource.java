@@ -1,5 +1,6 @@
 package br.com.blockchain.resource;
 
+import javax.annotation.security.PermitAll;
 import javax.transaction.Transactional;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -13,9 +14,10 @@ import br.com.blockchain.model.Usuario;
 public class UsuarioResource 
 {
 	@POST
+	@PermitAll
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void inserir(Usuario usuario) 
 	{
-		Usuario.persist(usuario);
+		Usuario.adicionar(usuario);
 	}
 }
